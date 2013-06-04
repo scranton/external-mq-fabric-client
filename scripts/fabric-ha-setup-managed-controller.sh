@@ -1,7 +1,6 @@
 #!/bin/sh
 
 JBOSS_FUSE_HOME=/root/opt/jboss-a-mq-6.0.0.redhat-024
-export JBOSS_FUSE_HOME
 
 CONTAINER_USERNAME=admin
 CONTAINER_PASSWORD=admin

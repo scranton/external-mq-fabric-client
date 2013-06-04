@@ -1,7 +1,6 @@
 #!/bin/sh
 
 JBOSS_FUSE_HOME=/root/opt/jboss-a-mq-6.0.0.redhat-024
-export JBOSS_FUSE_HOME
 
 CONTAINER_USERNAME=admin
 CONTAINER_PASSWORD=admin
@@ -31,6 +30,6 @@ if [ "x$JBOSS_FUSE_HOME" != "x" ]; then
     fi
 fi
 
-$KARAF_CLIENT -u $CONTAINER_USERNAME -p $CONTAINER_PASSWORD -h $CONTAINER_HOST -a $CONTAINER_SSH_PORT <<- end
+$KARAF_CLIENT -u $CONTAINER_USERNAME -p $CONTAINER_PASSWORD -h $CONTAINER_SSH_HOST -a $CONTAINER_SSH_PORT <<- end
     fabric:join --zookeeper-password $ZOOKEEPER_PASSWORD -p a-mq-east-broker $ZOOKEEPER_URL A-MQ-East
 end
