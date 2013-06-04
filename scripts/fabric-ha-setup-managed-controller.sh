@@ -31,7 +31,7 @@ if [ "x$JBOSS_FUSE_HOME" != "x" ]; then
 fi
 
 $KARAF_CLIENT -u $CONTAINER_USERNAME -p $CONTAINER_PASSWORD -h $CONTAINER_SSH_HOST -a $CONTAINER_SSH_PORT <<- end
-    fabric:create --clean --zookeeper-password $ZOOKEEPER_PASSWORD -p fmc root
+    fabric:create --clean --zookeeper-password $ZOOKEEPER_PASSWORD -p fmc
     fabric:mq-create --data $DATA_DIR/a-mq-east --group a-mq-east --networks a-mq-west --networks-username $CONTAINER_USERNAME --networks-password $CONTAINER_PASSWORD a-mq-east-broker
     fabric:mq-create --data $DATA_DIR/a-mq-west --group a-mq-west --networks a-mq-east --networks-username $CONTAINER_USERNAME --networks-password $CONTAINER_PASSWORD a-mq-west-broker
 end
