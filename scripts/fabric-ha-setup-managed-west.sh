@@ -31,5 +31,5 @@ if [ "x$JBOSS_FUSE_HOME" != "x" ]; then
 fi
 
 $KARAF_CLIENT -u $CONTAINER_USERNAME -p $CONTAINER_PASSWORD -h $CONTAINER_SSH_HOST -a $CONTAINER_SSH_PORT <<- end
-    fabric:join --zookeeper-password $ZOOKEEPER_PASSWORD -p a-mq-west-broker --force $ZOOKEEPER_URL A-MQ-West
+    fabric:join --zookeeper-password $ZOOKEEPER_PASSWORD -p a-mq-west-broker $ZOOKEEPER_URL
 end
